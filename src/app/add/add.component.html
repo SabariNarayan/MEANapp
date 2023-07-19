@@ -1,0 +1,23 @@
+<div class="container">
+  <h2 class="text-center">Add Employee</h2>
+  <form (ngSubmit)="addEmployee()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" [(ngModel)]="employee.name" required>
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="text" class="form-control" id="age" name="age" placeholder="Enter age" [(ngModel)]="employee.age" required>
+    </div>
+    <div class="form-group">
+      <label for="place">Place:</label>
+      <input type="text" class="form-control" id="place" name="place" placeholder="Enter place" [(ngModel)]="employee.place" required>
+    </div>
+    <div class="form-group">
+      <label for="salary">Salary:</label>
+      <input type="text" class="form-control" id="salary" name="salary" placeholder="Enter salary" [(ngModel)]="employee.salary" required>
+    </div>
+    <button id="button" type="submit" class="btn btn-primary">Submit</button>
+    <a routerLink="/list2" class="btn btn-primary" id="button2">Back to Employee List</a>
+  </form>
+</div>

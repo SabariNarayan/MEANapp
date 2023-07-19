@@ -1,0 +1,27 @@
+<div class="container">
+  <h2 id="head">Delete Employee</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Place</th>
+        <th>Salary</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.age }}</td>
+        <td>{{ employee.place }}</td>
+        <td>{{ employee.salary }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteEmployee(employee._id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary" routerLink="/list2">Back to List</button>
+</div>
+

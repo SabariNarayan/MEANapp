@@ -1,0 +1,41 @@
+<div class="container">
+  <h2 id="head">Employee List</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Place</th>
+        <th>Salary</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees; let i = index">
+        <td>
+          <input type="text" [(ngModel)]="employee.name" [disabled]="!employee.editMode" class="form-control">
+        </td>
+        <td>
+          <input type="text" [(ngModel)]="employee.age" [disabled]="!employee.editMode" class="form-control">
+        </td>
+        <td>
+          <input type="text" [(ngModel)]="employee.place" [disabled]="!employee.editMode" class="form-control">
+        </td>
+        <td>
+          <input type="text" [(ngModel)]="employee.salary" [disabled]="!employee.editMode" class="form-control">
+        </td>
+        <td>
+          <button *ngIf="!employee.editMode" class="btn btn-primary" (click)="toggleEditMode(employee)">Edit</button>
+          <button *ngIf="employee.editMode" class="btn btn-success" (click)="saveChanges(employee)">Save</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="button-group">
+    <div class="button-group">
+      <button class="btn btn-primary" (click)="logout()">Log Out</button>
+    </div>
+    <button class="btn btn-success" routerLink="/add">Add Employee</button>
+    <button class="btn btn-danger" routerLink="/delete">Delete Employee</button>
+  </div>
+</div>

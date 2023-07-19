@@ -1,0 +1,19 @@
+.container{
+    width: 500px;
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    font-weight: 700;
+    margin-left: 800px;
+    margin-top: 50px;
+    
+}
+.form-group{
+margin: 10px;
+color: black;}
+#button{
+    margin-left: 10px;
+}
+#button2{
+    background-color: rgb(42, 165, 54);
+    margin-left: 5px;
+}
